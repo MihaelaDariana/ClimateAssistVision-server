@@ -1,6 +1,8 @@
 package com.example.demo.Favorites;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,5 +21,10 @@ public class FavoritesController {
     @GetMapping("/")
     public List<Favorites> getFavorites(){
         return favoritesService.getFavorites();
+    }
+
+    @GetMapping("/get")
+    public List<Favorites> getFavFromId(@RequestParam("terminalId") String terminalId) {
+        return favoritesService.getFavFromId(terminalId);
     }
 }
