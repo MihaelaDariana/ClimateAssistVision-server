@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.Login;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

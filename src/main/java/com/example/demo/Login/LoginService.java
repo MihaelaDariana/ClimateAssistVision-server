@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.Login;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,4 +14,6 @@ public class LoginService {
     public Login addUser(Login login){
         return loginRepository.save(login);
     }
+
+
 }
